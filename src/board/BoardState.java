@@ -2,16 +2,15 @@ package board;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import common.*;
 
 public class BoardState {
 	private char[][] _board;
-	private int _width;
-	private int _height;
+  private int _width = Constants.tilesPerRow;
+  private int _height = Constants.tilesPerColumn;
 	private char _winner;
 	
 	public BoardState() {	
-		_width = 8;
-		_height = 8;
 		_board = new char[_width][_height];
 		for(int i = 0; i < _width; i++) {
 			for(int j = 0; j < _height; j++) {
@@ -38,8 +37,6 @@ public class BoardState {
 	}
 	
 	public BoardState(char[][] b) {
-		_width = 8;
-		_height = 8;
 		_board = new char[_width][_height];
 		for(int i = 0; i < _width; i++) {
 			for(int j = 0; j < _height; j++) {
